@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <title>Face Recognition</title>
+  </head>
+  <body id="root">
+      <div class="loader"><div class="lds-dual-ring"></div></div>
+    <header>
+      <div class="header-wrapper">
+        <div class=""><h1>recognize.io</h1></div>
+      </div>
+    </header>
+    <section id="section-1">
+      
+      <div class="row">
+        <div class="col col-sm-12 col-md-6 col-lg-6">
+          <div class="result"></div>
+        </div>
+        <div class="col col-sm-12 col-md-6 col-lg-6">
+          <div class="">
+          <label for="imageUpload" class="file_label">upload file</label
+          ><input type="file" id="imageUpload" name="file" />
+        </div>
+        <div class="results-wrap">
+          <h1>Results:</h1>
+          <div class="reco">
+            
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script src="./js/three.r92.min.js"></script>
+<script src="./js/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#root",
+  color:"#6d17cb",
+  backgroundColor:"#131417"
+})
+</script>
+  </body>
+</html>

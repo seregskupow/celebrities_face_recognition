@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Prompt:400,500|Tajawal:400,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #131417;
+  font-family: "Prompt", sans-serif;
+}
+
+header {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background: #252830bd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 105;
+}
+
+header:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  background-color: #2876f9;
+  background-image: linear-gradient(315deg, #2876f9 0%, #6d17cb 74%);
+}
+
+header .header-wrapper {
+  width: 96%;
+}
+
+header .header-wrapper h1 {
+  background-color: #2876f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2876f9), color-stop(74%, #6d17cb));
+  background-image: linear-gradient(180deg, #2876f9 30%, #6d17cb 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  position: relative;
+}
+
+header .header-wrapper h1:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  top: 0px;
+  left: -10px;
+  background: #131417;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+#section-1 {
+  width: 80%;
+}
+
+#section-1 .row .result {
+  height: 40vh;
+  width: 30vw;
+  border-radius: 10px;
+  color: transparent;
+  background: #252830bd;
+  position: relative;
+}
+
+#section-1 .row .result canvas {
+  width: 30vw;
+  height: 40vh;
+}
+
+#section-1 .row .result img {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 10px;
+}
+
+#section-1 .row .result:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+  border-radius: 10px;
+  background-color: #2876f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2876f9), color-stop(74%, #6d17cb));
+  background-image: linear-gradient(180deg, #2876f9 30%, #6d17cb 74%);
+  opacity: 0.8;
+}
+
+#section-1 .row .result:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+  background-color: #2876f9;
+  background-image: linear-gradient(315deg, #2876f9 30%, #6d17cb 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#section-1 .row .col #imageUpload {
+  opacity: 0;
+}
+
+#section-1 .row .col .reco {
+  background: #252830bd;
+  padding: 15px 10px 10px 10px;
+  width: 30%;
+  border-radius: 15px;
+  display: none;
+}
+
+#section-1 .row .col .reco a {
+  color: #fff;
+}
+
+#section-1 .row .col h1 {
+  background-color: #2876f9;
+  background-image: linear-gradient(315deg, #2876f9 30%, #6d17cb 74%);
+  color: #fff;
+  display: inline;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+}
+
+.file_label {
+  display: block;
+  margin: 50px auto;
+  font-size: 20px;
+  width: 250px;
+  height: 40px;
+  background-color: #2876f9;
+  background-image: linear-gradient(315deg, #2876f9 30%, #6d17cb 74%);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.file_label:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(38, 41, 49, 0.719);
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+}
+
+.loader .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loader .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #6d17cb transparent #6d17cb transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */
